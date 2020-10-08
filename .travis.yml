@@ -272,7 +272,7 @@ jobs:
     script: mkdir -p build && cd build && cmake -D EXAMPLES=ON -D MPI=ON  -D ICB=ON  .. && make VERBOSE=1 && make test  && make package_source;
   - stage: ubuntu_xenial
     dist: xenial
-    script: ./bootstrap && ./configure --enable-mpi --enable-icb                        && make VERBOSE=1 && make check && make distcheck;
+    script: ./bootstrap && ./configure --enable-mpif90 --enable-icb                        && make VERBOSE=1 && make check && make distcheck;
   - stage: ubuntu_xenial
     arch: ppc64le
     dist: xenial
